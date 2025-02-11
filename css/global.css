@@ -1,0 +1,89 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --bg-color: #000000;
+  --text-color: #18181b;
+  --stroker-color: #454545;
+  --text-color-primary: #ffffff;
+  --text-color-secondary: #9ca3af;
+  --text-color-price: #22c55e;
+
+  --bt-color-gradient-primary: #1371ef;
+  --bt-color-gradient-secondary: #e539a2;
+
+  --bg-color11: linear-gradient(137deg, #1371ef, #e539a2);
+
+  --ff-nunito-sans: "Nunito", serif;
+
+  --fs-10px: 10px;
+  --fs-12px: 12px;
+  --fs-14px: 14px;
+  --fs-15px: 15px;
+  --fs-16px: 16px;
+  --s-18px: 18px;
+  --fs-21px: 21px;
+  --fs-25px: 25px;
+  --fs-36px: 36px;
+  --fs-40px: 40px;
+  --fs-60px: 60px;
+}
+
+html {
+  font-family: "Nunito", serif;
+  font-optical-sizing: auto;
+
+  background: var(--bg-color);
+  color: var(--text-color-primary);
+}
+
+h1 {
+  font-family: var(--ff-nunito-sans);
+  font-size: var(--fs-60px);
+  font-weight: 300;
+}
+
+a {
+  color: var(--text-color-primary);
+  text-decoration: none;
+  font-size: var(--fs-21px);
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--text-color-primary);
+  font-size: var(--fs-16px);
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-family: var(--fs-21px)
+  }
+  a {
+    font-size: var(--fs-16px);
+  }
+}
+
+
+@media (max-width: 393px) {
+  a {
+    font-size: var(--fs-12px);
+  }
+}
