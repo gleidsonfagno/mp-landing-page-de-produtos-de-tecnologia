@@ -23,7 +23,11 @@
 
 
 @media (max-width: 393px) {
+    .button-gradiente {
+        font-size: var(--fs-12px);
+    }
     .button-dark {
       font-size: var(--fs-12px);
     }
+
   }

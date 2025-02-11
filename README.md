@@ -21,63 +21,59 @@ Crie uma estrutura básica de pastas:
 #### Requisito 1: Menu
 Crie o cabeçalho da página, ele deve conter:
 
->  Logotipo.
->  
->  Menu com links para "Home", "Produtos" e "Contato".
->  
->  Um botão de "Carrinho".
+> Logotipo.
+>
+> Menu com links para "Home", "Produtos" e "Contato".
+>
+> Um botão de "Carrinho".
 
 #### Requisito 2: Banner
 Crie a seção inicial da página (hero banner).
 
->   Um título principal (h1) com destaque para a frase "Design com Beleza e Funcionalidade".
->   
->   Um botão de "Compre agora".
->   
->  Uma imagem grande de smartphone em destaque.
+> Um título principal (h1) com destaque para a frase "Design com Beleza e Funcionalidade".
+>
+> Um botão de "Compre agora".
+>
+> Uma imagem grande de smartphone em destaque.
 
 #### Requisito 3: Produtos
 Desenvolva uma seção de "Produtos em destaque" e deve exibir pelo menos 4 smartphones e 4 smartwatches. Cada produto deve ter:
 
->   Uma imagem.
->   
->  Avaliação (usando estrelas ou ícones).
->  
->  Um botão "Compre agora".
+> Uma imagem.
+>
+> Avaliação (usando estrelas ou ícones).
+> 
+> Um botão "Compre agora".
 
 #### Requisito 4: Suporte ao cliente
 Adicione uma seção de suporte ao cliente.
 
->   Texto principal: "24/7 no suporte ao cliente".
->   
->   Subtexto explicando o suporte.
->   
->  Uma imagem representando a equipe de suporte.
+> Texto principal: "24/7 no suporte ao cliente".
+>
+> Subtexto explicando o suporte.
+>
+> Uma imagem representando a equipe de suporte.
 
 #### Requisito 5: Formulário
 Insira um formulário para encomendas. Campos necessários:
 
->  Nome.
->  
->   E-mail.
->   
->   Mensagem.
->   
+> Nome.
+>
+> E-mail.
+>
+> Mensagem.
+>
 > Adicione um botão de envio estilizado.
-
 
 👀 Dicas:
 
->   Use display: flex; para organizar os elementos.
->   
->   Utilize hover nos links para destacar interações.
-
-
+> Use display: flex; para organizar os elementos.
+>
+> Utilize hover nos links para destacar interações.
 
 ## 🔨 Desafio extra para quem quer ir além
 
 - Deve ajustar o layout para telas menores (smartphones e tablets).
-
 
 ## 🎨 Design Sugerido
 

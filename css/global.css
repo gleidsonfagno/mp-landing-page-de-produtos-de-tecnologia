@@ -54,6 +54,12 @@ h1 {
   font-size: var(--fs-60px);
   font-weight: 300;
 }
+h4 {
+  font-family: var(--ff-nunito-sans);
+  font-size: var(--fs-25px);
+  font-weight: 300;
+  color: var(--text-color-secondary);
+}
 
 a {
   color: var(--text-color-primary);
@@ -74,15 +80,20 @@ button {
 
 @media (max-width: 768px) {
   h1 {
-    font-family: var(--fs-21px)
+    font-size: var(--fs-36px) !important;
   }
   a {
     font-size: var(--fs-16px);
   }
 }
 
-
 @media (max-width: 393px) {
+  h1 {
+    font-size: var(--fs-21px) !important;
+  }
+  h4 {
+    font-size: var(--fs-10px);
+  }
   a {
     font-size: var(--fs-12px);
   }
