@@ -28,6 +28,7 @@
     }
     .button-dark {
       font-size: var(--fs-12px);
+      padding: 4px 6px
     }
 
   }

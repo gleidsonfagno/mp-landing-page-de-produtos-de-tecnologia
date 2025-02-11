@@ -14,7 +14,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 300px;
+    height: 200px;
     background: linear-gradient(to bottom, transparent,rgb(0, 0, 0)); 
     pointer-events: none; 
 }
@@ -22,10 +22,10 @@
 .hero-container {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 32px 16px;
     display: flex;
     justify-content: space-between;
     gap: 50px;
+    padding: 32px 16px 0;
 }
 
 .hero-text {
@@ -34,26 +34,27 @@
     gap: 48px;
 }
 
-/* .hero-banner img {
-    display: block;
-    max-width: 100%;
-} */
-
 @media (max-width: 768px) {
     .hero-banner img {
         display: block;
         max-width: 100%;
+        width: fit-content;
     }
 
     .hero-text {
         display: flex;
         flex-direction: column;
         gap: 10px;
+
     }
 }
 
-
-@media (max-width: 393px) {
+@media (max-width: 625px) {
+    .hero-banner img {
+        display: block;
+        max-width: 200px;
+        width: fit-content;
+    }
     .hero::after {
         content: "";
         position: absolute;
@@ -61,7 +62,28 @@
         left: 0;
         width: 100%;
         height: 100px;
-        background: linear-gradient(to bottom, transparent,rgb(0, 0, 0)); 
+        background: linear-gradient(to bottom, transparent,rgba(0, 0, 0, 0.56)); 
+        pointer-events: none; 
+    }
+    
+}
+
+
+@media (max-width: 393px) {
+    .hero-container {
+        gap: 50px;
+    }
+
+    .hero-banner img {
+        display: block;
+        max-width: 152.17px;
+        width: 100%;
+        width: fit-content;
+    }
+    .hero::after {
+        
+        height: 50%;
+        background: linear-gradient(to bottom, transparent,rgba(0, 0, 0, 0.56)); 
         pointer-events: none; 
     }
 

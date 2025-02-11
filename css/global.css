@@ -54,6 +54,10 @@ h1 {
   font-size: var(--fs-60px);
   font-weight: 300;
 }
+h2 {
+  font-size: var(--fs-36px);
+  font-weight: 300;
+}
 h4 {
   font-family: var(--ff-nunito-sans);
   font-size: var(--fs-25px);
@@ -86,6 +90,7 @@ button {
     font-size: var(--fs-16px);
   }
 }
+
 
 @media (max-width: 393px) {
   h1 {
