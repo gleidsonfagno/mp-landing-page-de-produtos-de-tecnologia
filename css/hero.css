@@ -71,7 +71,7 @@
 
 @media (max-width: 393px) {
     .hero-container {
-        gap: 50px;
+        gap: 10px;
     }
 
     .hero-banner img {

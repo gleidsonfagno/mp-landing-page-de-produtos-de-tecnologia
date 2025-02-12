@@ -29,6 +29,11 @@ ul {
     gap: 42px;
 }
 
+.logo img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
 
 .filterSelect {
     background: transparent;
@@ -91,6 +96,12 @@ ul {
     ul {
         flex-direction: column;
         gap: 16px;
+    }
+
+    .logo img {
+        display: block;
+        width: 100%;
+        max-width: 50px;
     }
 
     .cart {

@@ -16,7 +16,7 @@
   <header>
     <nav>
       <div class="menu-mobile">
-        <button>
+        <button id="menu-open" onclick="toggleMenu()">
           <img src="assets/icons/Menu.svg" alt="icone do menu" />
         </button>
       </div>
@@ -30,7 +30,7 @@
           </li>
 
           <li>
-            <span><img src="assets/icons/logo.svg" alt="icone de uma logo" /></span>
+            <span class="logo"><img src="assets/icons/logo.svg" alt="icone de uma logo" /></span>
           </li>
 
           <li>
@@ -226,10 +226,161 @@
       </div>
     </section>
 
-    
+    <section class="products-section" id="applewatch">
+      <div class="search">
+        <div class="filters">
+          <select id="filterSelect" class="filterSelect" onchange="applyFilter()">
+            <option value="">Filtros</option>
+            <option value="recent">Mais Recentes</option>
+            <option value="cheap">Mais Baratos</option>
+            <option value="popular">Mais Vistos</option>
+          </select>
+
+          <div class="input">
+            <input type="text" id="searchInput" placeholder="Buscar..." />
+            <img src="assets/icons/Search.svg" alt="" />
+            <div>
+              <button class="button-dark">Procurar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-content">
+          <div class="card">
+            <h2>Iphone 16</h2>
+
+            <div>
+              <img src="assets/products/SerieA-3x.png" alt="imagem do iphone" />
+            </div>
+
+            <div class="product-card">
+              <div class="stars" id="star-rating">
+                <span class="star" data-value="5">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="1">★</span>
+                <span>(6)</span>
+                <!-- Quantidade de avaliações -->
+              </div>
+
+              <div class="price-content">
+                <p class="price">R$ 1.899,90 no PIX</p>
+                <span class="price-original">R$ 2.199,90</span>
+              </div>
+              <p class="description">
+                O novíssimo sistema de câmera é muito versátil de perto ou de
+                longe. Câmera de 48 MP.
+              </p>
+            </div>
+
+            <button class="button-gradiente">Compre agora</button>
+          </div>
+
+          <div class="card">
+            <h2>Iphone 16</h2>
+
+            <div>
+              <img src="assets/products/SerieB-2w.png" alt="imagem do iphone" />
+            </div>
+
+            <div class="product-card">
+              <div class="stars" id="star-rating">
+                <span class="star" data-value="5">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="1">★</span>
+                <span>(6)</span>
+                <!-- Quantidade de avaliações -->
+              </div>
+
+              <div class="price-content">
+                <p class="price">R$ 1.899,90 no PIX</p>
+                <span class="price-original">R$ 2.199,90</span>
+              </div>
+              <p class="description">
+                O novíssimo sistema de câmera é muito versátil de perto ou de
+                longe. Câmera de 48 MP.
+              </p>
+            </div>
+
+            <button class="button-gradiente">Compre agora</button>
+          </div>
+
+          <div class="card">
+            <h2>Iphone 16</h2>
+
+            <div>
+              <img src="assets/products/Oficial-3xd.png" alt="imagem do iphone" />
+            </div>
+
+            <div class="product-card">
+              <div class="stars" id="star-rating">
+                <span class="star" data-value="5">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="1">★</span>
+                <span>(6)</span>
+                <!-- Quantidade de avaliações -->
+              </div>
+
+              <div class="price-content">
+                <p class="price">R$ 1.899,90 no PIX</p>
+                <span class="price-original">R$ 2.199,90</span>
+              </div>
+              <p class="description">
+                O novíssimo sistema de câmera é muito versátil de perto ou de
+                longe. Câmera de 48 MP.
+              </p>
+            </div>
+
+            <button class="button-gradiente">Compre agora</button>
+          </div>
+
+          <div class="card">
+            <h2>Iphone 16</h2>
+
+            <div>
+              <img src="assets/products/Apple-Watch.png" alt="imagem do iphone" />
+            </div>
+
+            <div class="product-card">
+              <div class="stars" id="star-rating">
+                <span class="star" data-value="5">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="1">★</span>
+                <span >(6)</span>
+                <!-- Quantidade de avaliações -->
+              </div>
+
+              <div class="price-content">
+                <p class="price">R$ 1.899,90 no PIX</p>
+                <p class="price-original">R$ 2.199,90</p>
+              </div>
+              <p class="description">
+                O novíssimo sistema de câmera é muito versátil de perto ou de
+                longe. Câmera de 48 MP.
+              </p>
+            </div>
+
+            <button class="button-gradiente">Compre agora</button>
+           
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="suporte">
+      <h2>Seção Suporte</h2>
+    </section>
   </main>
 
   <script src="src/script.js"></script>
 </body>
 
 </html>
+<!-- <section class="products-section" id="applewatch"></section> -->

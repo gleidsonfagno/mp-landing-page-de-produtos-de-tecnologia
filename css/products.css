@@ -54,45 +54,44 @@
 }
 
 .card img {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 
 .price-content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .price {
   color: var(--text-color-price);
   font-size: var(--fs-12px);
   margin: 10px 0 5px;
-  
 }
 
 .price-original {
   text-decoration: line-through;
   color: #888;
-  font-size: var( --fs-10px);
+  font-size: var(--fs-10px);
 }
 
 .description {
-  font-size: var( --fs-10px);
+  font-size: var(--fs-10px);
   color: var(--text-color-secondary);
 }
 
 .star:hover,
-    .star:hover ~ .star,
-    .star.selected,
-    .star.selected ~ .star {
-      color: gold;
-    }
-    
+.star:hover ~ .star,
+.star.selected,
+.star.selected ~ .star {
+  color: gold;
+}
+
 @media (max-width: 768px) {
-    .product-content {
-        padding:   26px  0 ;
-    }
+  .product-content {
+    padding: 26px 0;
+  }
 }
