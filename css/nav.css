@@ -87,7 +87,7 @@ ul {
         position: absolute;
         top: 68px;
         background: rgba(0, 0, 0, 0.9); 
-        gap: 20px;
+        gap: 16px;
         width: fit-content;
         border:  1px solid var(--stroker-color);
         padding: 10px 20px;
@@ -101,11 +101,12 @@ ul {
     .logo img {
         display: block;
         width: 100%;
-        max-width: 50px;
+        max-width: 70px;
     }
 
     .cart {
         flex-direction: column;
+        gap: 16px;
     }
 
     .filterSelect {
