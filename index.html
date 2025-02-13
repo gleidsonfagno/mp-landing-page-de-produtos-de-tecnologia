@@ -1,398 +1,492 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>loja de produtos</title>
+    <link
+      rel="shortcut icon"
+      href="/assets/icons/logo.svg"
+      type="image/x-icon"
+    />
+    <link rel="preload" fetchpriority="high" as="image" href="/assets/phone1.png" type="image/webp">
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>loja de produtos</title>
-  <link rel="stylesheet" href="/css/index.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-    rel="stylesheet" />
-</head>
-
-<body>
-  <header>
-    <nav>
-      <div class="menu-mobile">
-        <button id="menu-open" onclick="toggleMenu()">
-          <img src="assets/icons/Menu.svg" alt="icone do menu" />
-        </button>
-      </div>
-
-      <div class="menu">
-        <ul>
-          <li>
-            <button class="menu-desktop">
-              <img src="assets/icons/Menu.svg" alt="icone do menu" />
-            </button>
-          </li>
-
-          <li>
-            <span class="logo"><img src="assets/icons/logo.svg" alt="icone de uma logo" /></span>
-          </li>
-
-          <li>
-            <select class="filterSelect" onchange="scrollToSection(this)">
-              <option value="" disabled selected>Produtos</option>
-              <option value="iphone">iPhone 16</option>
-              <option value="applewatch">Apple Watch</option>
-              <option value="suporte">Suporte</option>
-            </select>
-          </li>
-
-          <li>
-            <a href="/">Contato</a>
-          </li>
-        </ul>
-
-        <div class="cart">
-          <button>
-            <img src="assets/icons/Shopping-Cart.png" alt="" />
+  <body>
+    <header>
+      <nav>
+        <div class="menu-mobile">
+          <button id="menu-open" onclick="toggleMenu()">
+            <img src="assets/icons/Menu.svg" alt="icone do menu" />
           </button>
-          <button><img src="assets/icons/Search.svg" alt="" /></button>
-          <button class="button-dark">Comprar</button>
         </div>
-      </div>
 
-      <span class="logo-mobile">
-        <img src="assets/icons/logo.svg" alt="" />
-      </span>
-    </nav>
-  </header>
-  <main>
-    <section class="hero">
-      <div class="hero-container">
-        <div class="hero-text">
-          <h4>Smartphone Series</h4>
-          <h1>Design com Beleza e Funcionalidade</h1>
+        <div class="menu">
+          <ul>
+            <li>
+              <button class="menu-desktop">
+                <img src="assets/icons/Menu.svg" alt="icone do menu" />
+              </button>
+            </li>
+
+            <li>
+              <span class="logo"
+                ><img src="assets/icons/logo.svg" alt="icone de uma logo"
+              /></span>
+            </li>
+
+            <li>
+              <select class="filterSelect" onchange="scrollToSection(this)">
+                <img src="assets/icons/arrow-left.png" alt="" />
+                <option value="" disabled selected>Produtos</option>
+                <option value="iphone">iPhone 16</option>
+                <option value="applewatch">Apple Watch</option>
+              </select>
+            </li>
+
+            <li>
+              <a href="#suporte">Contato</a>
+            </li>
+          </ul>
+
+          <div class="cart">
+            <button aria-label="Abrir carrinho de compras">
+              <img
+                src="assets/icons/Shopping-Cart.png"
+                alt="imagem de um carinho"
+              />
+            </button>
+            <button  aria-label="Abrir campo de busca">
+              <img src="assets/icons/Search.svg" alt="imagem de uma lupa" />
+            </button>
+            <button
+              class="button-dark"
+              aria-label="Comprar com carrinho de compras"
+            >
+              <img
+                src="assets/icons/Shopping-Cart.png"
+                alt="Ícone de carrinho de compras"
+              />
+              Comprar
+            </button>
+          </div>
+        </div>
+
+        <span class="logo-mobile">
+          <img src="assets/icons/logo.svg" alt="" />
+        </span>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-container">
+          <div class="hero-text">
+            <h4>Smartphone Series</h4>
+            <h1>Design com Beleza e Funcionalidade</h1>
+            <div>
+              <button class="button-gradiente">Compre agora</button>
+            </div>
+          </div>
+
+          <div class="hero-banner">
+            <img
+              src="assets/phone1.png"
+              alt="baner de um Iphone de frente e costa "
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="products-section" id="iphone">
+        <div class="search">
+          <div class="filters">
+            <select
+              id="filterSelect"
+              class="filterSelect"
+              onchange="applyFilter()"
+            >
+              <option value="">Filtros</option>
+              <option value="recent">Mais Recentes</option>
+              <option value="cheap">Mais Baratos</option>
+              <option value="popular">Mais Vistos</option>
+            </select>
+
+            <div class="input">
+              <input type="text" id="searchInput" placeholder="Buscar..." />
+              <img src="assets/icons/Search.svg" alt="" />
+              <div>
+                <button class="button-dark">Procurar</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-content">
+            <div class="card">
+              <h2>Iphone 16</h2>
+
+              <div>
+                <img
+                  src="assets/products/iphone16.png"
+                  alt="imagem do iphone"
+                />
+              </div>
+
+              <div class="product-card">
+                <div class="stars" id="star-rating">
+                  <span class="star" data-value="5">★</span>
+                  <span class="star" data-value="4">★</span>
+                  <span class="star" data-value="3">★</span>
+                  <span class="star" data-value="2">★</span>
+                  <span class="star" data-value="1">★</span>
+                  <span>(6)</span>
+                  <!-- Quantidade de avaliações -->
+                </div>
+
+                <div class="price-content">
+                  <p class="price">R$ 1.899,90 no PIX</p>
+                  <span class="price-original">R$ 2.199,90</span>
+                </div>
+                <p class="description">
+                  O novíssimo sistema de câmera é muito versátil de perto ou de
+                  longe. Câmera de 48 MP.
+                </p>
+              </div>
+
+              <button class="button-gradiente">Compre agora</button>
+            </div>
+
+            <div class="card">
+              <h2>Iphone 16</h2>
+
+              <div>
+                <img
+                  src="assets/products/iphone16.png"
+                  alt="imagem do iphone"
+                />
+              </div>
+
+              <div class="product-card">
+                <div class="stars" id="star-rating">
+                  <span class="star" data-value="5">★</span>
+                  <span class="star" data-value="4">★</span>
+                  <span class="star" data-value="3">★</span>
+                  <span class="star" data-value="2">★</span>
+                  <span class="star" data-value="1">★</span>
+                  <span>(6)</span>
+                  <!-- Quantidade de avaliações -->
+                </div>
+
+                <div class="price-content">
+                  <p class="price">R$ 1.899,90 no PIX</p>
+                  <span class="price-original">R$ 2.199,90</span>
+                </div>
+                <p class="description">
+                  O novíssimo sistema de câmera é muito versátil de perto ou de
+                  longe. Câmera de 48 MP.
+                </p>
+              </div>
+
+              <button class="button-gradiente">Compre agora</button>
+            </div>
+
+            <div class="card">
+              <h2>Iphone 16</h2>
+
+              <div>
+                <img
+                  src="assets/products/iphone16.png"
+                  alt="imagem do iphone"
+                />
+              </div>
+
+              <div class="product-card">
+                <div class="stars" id="star-rating">
+                  <span class="star" data-value="5">★</span>
+                  <span class="star" data-value="4">★</span>
+                  <span class="star" data-value="3">★</span>
+                  <span class="star" data-value="2">★</span>
+                  <span class="star" data-value="1">★</span>
+                  <span>(6)</span>
+                  <!-- Quantidade de avaliações -->
+                </div>
+
+                <div class="price-content">
+                  <p class="price">R$ 1.899,90 no PIX</p>
+                  <span class="price-original">R$ 2.199,90</span>
+                </div>
+                <p class="description">
+                  O novíssimo sistema de câmera é muito versátil de perto ou de
+                  longe. Câmera de 48 MP.
+                </p>
+              </div>
+
+              <button class="button-gradiente">Compre agora</button>
+            </div>
+
+            <div class="card">
+              <h2>Iphone 16</h2>
+
+              <div>
+                <img
+                  src="assets/products/iphone16.png"
+                  alt="imagem do iphone"
+                />
+              </div>
+
+              <div class="product-card">
+                <div class="stars" id="star-rating">
+                  <span class="star" data-value="5">★</span>
+                  <span class="star" data-value="4">★</span>
+                  <span class="star" data-value="3">★</span>
+                  <span class="star" data-value="2">★</span>
+                  <span class="star" data-value="1">★</span>
+                  <span>(6)</span>
+                  <!-- Quantidade de avaliações -->
+                </div>
+
+                <div class="price-content">
+                  <p class="price">R$ 1.899,90 no PIX</p>
+                  <p class="price-original">R$ 2.199,90</p>
+                </div>
+                <p class="description">
+                  O novíssimo sistema de câmera é muito versátil de perto ou de
+                  longe. Câmera de 48 MP.
+                </p>
+              </div>
+
+              <button class="button-gradiente">Compre agora</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="products-section" id="applewatch">
+        <div class="search">
+          <div class="filters">
+            <select
+              id="filterSelect"
+              class="filterSelect"
+              onchange="applyFilter()"
+            >
+              <option value="">Filtros</option>
+              <option value="recent">Mais Recentes</option>
+              <option value="cheap">Mais Baratos</option>
+              <option value="popular">Mais Vistos</option>
+            </select>
+
+            <div class="input">
+              <input type="text" id="searchInput" placeholder="Buscar..." />
+              <img src="assets/icons/Search.svg" alt="" />
+              <div>
+                <button class="button-dark">Procurar</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-content">
+            <div class="card">
+              <h2>SerieA-3x</h2>
+
+              <div>
+                <img
+                  src="assets/products/SerieA-3x.png"
+                  alt="imagem do iphone"
+                />
+              </div>
+
+              <div class="product-card">
+                <div class="stars" id="star-rating">
+                  <span class="star" data-value="5">★</span>
+                  <span class="star" data-value="4">★</span>
+                  <span class="star" data-value="3">★</span>
+                  <span class="star" data-value="2">★</span>
+                  <span class="star" data-value="1">★</span>
+                  <span>(6)</span>
+                  <!-- Quantidade de avaliações -->
+                </div>
+
+                <div class="price-content">
+                  <p class="price">R$ 1.899,90 no PIX</p>
+                  <span class="price-original">R$ 2.199,90</span>
+                </div>
+                <p class="description">
+                  O novíssimo sistema de câmera é muito versátil de perto ou de
+                  longe. Câmera de 48 MP.
+                </p>
+              </div>
+
+              <button class="button-gradiente">Compre agora</button>
+            </div>
+
+            <div class="card">
+              <h2>SerieB-2w</h2>
+
+              <div>
+                <img
+                  src="assets/products/SerieB-2w.png"
+                  alt="imagem do iphone"
+                />
+              </div>
+
+              <div class="product-card">
+                <div class="stars" id="star-rating">
+                  <span class="star" data-value="5">★</span>
+                  <span class="star" data-value="4">★</span>
+                  <span class="star" data-value="3">★</span>
+                  <span class="star" data-value="2">★</span>
+                  <span class="star" data-value="1">★</span>
+                  <span>(6)</span>
+                  <!-- Quantidade de avaliações -->
+                </div>
+
+                <div class="price-content">
+                  <p class="price">R$ 1.899,90 no PIX</p>
+                  <span class="price-original">R$ 2.199,90</span>
+                </div>
+                <p class="description">
+                  O novíssimo sistema de câmera é muito versátil de perto ou de
+                  longe. Câmera de 48 MP.
+                </p>
+              </div>
+
+              <button class="button-gradiente">Compre agora</button>
+            </div>
+
+            <div class="card">
+              <h2>Oficial-3xd</h2>
+
+              <div>
+                <img
+                  src="assets/products/Oficial-3xd.png"
+                  alt="imagem do iphone"
+                />
+              </div>
+
+              <div class="product-card">
+                <div class="stars" id="star-rating">
+                  <span class="star" data-value="5">★</span>
+                  <span class="star" data-value="4">★</span>
+                  <span class="star" data-value="3">★</span>
+                  <span class="star" data-value="2">★</span>
+                  <span class="star" data-value="1">★</span>
+                  <span>(6)</span>
+                  <!-- Quantidade de avaliações -->
+                </div>
+
+                <div class="price-content">
+                  <p class="price">R$ 1.899,90 no PIX</p>
+                  <span class="price-original">R$ 2.199,90</span>
+                </div>
+                <p class="description">
+                  O novíssimo sistema de câmera é muito versátil de perto ou de
+                  longe. Câmera de 48 MP.
+                </p>
+              </div>
+
+              <button class="button-gradiente">Compre agora</button>
+            </div>
+
+            <div class="card">
+              <h2>Apple-Watch</h2>
+
+              <div>
+                <img
+                  src="assets/products/Apple-Watch.png"
+                  alt="imagem do iphone"
+                />
+              </div>
+
+              <div class="product-card">
+                <div class="stars" id="star-rating">
+                  <span class="star" data-value="5">★</span>
+                  <span class="star" data-value="4">★</span>
+                  <span class="star" data-value="3">★</span>
+                  <span class="star" data-value="2">★</span>
+                  <span class="star" data-value="1">★</span>
+                  <span>(6)</span>
+                  <!-- Quantidade de avaliações -->
+                </div>
+
+                <div class="price-content">
+                  <p class="price">R$ 1.899,90 no PIX</p>
+                  <p class="price-original">R$ 2.199,90</p>
+                </div>
+                <p class="description">
+                  O novíssimo sistema de câmera é muito versátil de perto ou de
+                  longe. Câmera de 48 MP.
+                </p>
+              </div>
+
+              <button class="button-gradiente">Compre agora</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="suporte">
+        <div class="suporte-content">
+          <article>
+            <h2>24/7 no suporte ao cliente</h2>
+            <p>
+              Nosso suporte está 7/7 24horas por dia para te ajudar com qualquer
+              problema em nossos aparelhos
+            </p>
+            <div>
+              <button class="button-gradiente">Contate-nos</button>
+            </div>
+          </article>
+
+          <div class="suporte-image">
+            <img
+              src="/assets/suporte.png"
+              alt="uma pessoa  mexenndo no notebook e fone de ouvido"
+            />
+          </div>
+        </div>
+      </section>
+
+
+      <section  id="form-section" >
+        <div class="form-content">
+          <h2>Faça sua encomenda</h2>
+          <p>Se não encontrar o que deseja, encomende conosco e garanta um super desconto!</p>
+        </div>
+
+        <form class="button-gradiente form" >
           <div>
-            <button class="button-gradiente">Compre agora</button>
-          </div>
-        </div>
-
-        <div class="hero-banner">
-          <img src="assets/phone.svg" alt="baner de um Iphone de frente e costa " />
-        </div>
-      </div>
-    </section>
-
-    <section class="products-section" id="iphone">
-      <div class="search">
-        <div class="filters">
-          <select id="filterSelect" class="filterSelect" onchange="applyFilter()">
-            <option value="">Filtros</option>
-            <option value="recent">Mais Recentes</option>
-            <option value="cheap">Mais Baratos</option>
-            <option value="popular">Mais Vistos</option>
-          </select>
-
-          <div class="input">
-            <input type="text" id="searchInput" placeholder="Buscar..." />
-            <img src="assets/icons/Search.svg" alt="" />
-            <div>
-              <button class="button-dark">Procurar</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-content">
-          <div class="card">
-            <h2>Iphone 16</h2>
-
-            <div>
-              <img src="assets/products/iphone16.png" alt="imagem do iphone" />
-            </div>
-
-            <div class="product-card">
-              <div class="stars" id="star-rating">
-                <span class="star" data-value="5">★</span>
-                <span class="star" data-value="4">★</span>
-                <span class="star" data-value="3">★</span>
-                <span class="star" data-value="2">★</span>
-                <span class="star" data-value="1">★</span>
-                <span>(6)</span>
-                <!-- Quantidade de avaliações -->
-              </div>
-
-              <div class="price-content">
-                <p class="price">R$ 1.899,90 no PIX</p>
-                <span class="price-original">R$ 2.199,90</span>
-              </div>
-              <p class="description">
-                O novíssimo sistema de câmera é muito versátil de perto ou de
-                longe. Câmera de 48 MP.
-              </p>
-            </div>
-
-            <button class="button-gradiente">Compre agora</button>
+            <label for="name">Nome</label>
+            <input type="text" id="name" placeholder="Seu nome" />
           </div>
 
-          <div class="card">
-            <h2>Iphone 16</h2>
-
-            <div>
-              <img src="assets/products/iphone16.png" alt="imagem do iphone" />
-            </div>
-
-            <div class="product-card">
-              <div class="stars" id="star-rating">
-                <span class="star" data-value="5">★</span>
-                <span class="star" data-value="4">★</span>
-                <span class="star" data-value="3">★</span>
-                <span class="star" data-value="2">★</span>
-                <span class="star" data-value="1">★</span>
-                <span>(6)</span>
-                <!-- Quantidade de avaliações -->
-              </div>
-
-              <div class="price-content">
-                <p class="price">R$ 1.899,90 no PIX</p>
-                <span class="price-original">R$ 2.199,90</span>
-              </div>
-              <p class="description">
-                O novíssimo sistema de câmera é muito versátil de perto ou de
-                longe. Câmera de 48 MP.
-              </p>
-            </div>
-
-            <button class="button-gradiente">Compre agora</button>
-          </div>
-
-          <div class="card">
-            <h2>Iphone 16</h2>
-
-            <div>
-              <img src="assets/products/iphone16.png" alt="imagem do iphone" />
-            </div>
-
-            <div class="product-card">
-              <div class="stars" id="star-rating">
-                <span class="star" data-value="5">★</span>
-                <span class="star" data-value="4">★</span>
-                <span class="star" data-value="3">★</span>
-                <span class="star" data-value="2">★</span>
-                <span class="star" data-value="1">★</span>
-                <span>(6)</span>
-                <!-- Quantidade de avaliações -->
-              </div>
-
-              <div class="price-content">
-                <p class="price">R$ 1.899,90 no PIX</p>
-                <span class="price-original">R$ 2.199,90</span>
-              </div>
-              <p class="description">
-                O novíssimo sistema de câmera é muito versátil de perto ou de
-                longe. Câmera de 48 MP.
-              </p>
-            </div>
-
-            <button class="button-gradiente">Compre agora</button>
-          </div>
-
-          <div class="card">
-            <h2>Iphone 16</h2>
-
-            <div>
-              <img src="assets/products/iphone16.png" alt="imagem do iphone" />
-            </div>
-
-            <div class="product-card">
-              <div class="stars" id="star-rating">
-                <span class="star" data-value="5">★</span>
-                <span class="star" data-value="4">★</span>
-                <span class="star" data-value="3">★</span>
-                <span class="star" data-value="2">★</span>
-                <span class="star" data-value="1">★</span>
-                <span >(6)</span>
-                <!-- Quantidade de avaliações -->
-              </div>
-
-              <div class="price-content">
-                <p class="price">R$ 1.899,90 no PIX</p>
-                <p class="price-original">R$ 2.199,90</p>
-              </div>
-              <p class="description">
-                O novíssimo sistema de câmera é muito versátil de perto ou de
-                longe. Câmera de 48 MP.
-              </p>
-            </div>
-
-            <button class="button-gradiente">Compre agora</button>
-           
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="products-section" id="applewatch">
-      <div class="search">
-        <div class="filters">
-          <select id="filterSelect" class="filterSelect" onchange="applyFilter()">
-            <option value="">Filtros</option>
-            <option value="recent">Mais Recentes</option>
-            <option value="cheap">Mais Baratos</option>
-            <option value="popular">Mais Vistos</option>
-          </select>
-
-          <div class="input">
-            <input type="text" id="searchInput" placeholder="Buscar..." />
-            <img src="assets/icons/Search.svg" alt="" />
-            <div>
-              <button class="button-dark">Procurar</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-content">
-          <div class="card">
-            <h2>SerieA-3x</h2>
-
-            <div>
-              <img src="assets/products/SerieA-3x.png" alt="imagem do iphone" />
-            </div>
-
-            <div class="product-card">
-              <div class="stars" id="star-rating">
-                <span class="star" data-value="5">★</span>
-                <span class="star" data-value="4">★</span>
-                <span class="star" data-value="3">★</span>
-                <span class="star" data-value="2">★</span>
-                <span class="star" data-value="1">★</span>
-                <span>(6)</span>
-                <!-- Quantidade de avaliações -->
-              </div>
-
-              <div class="price-content">
-                <p class="price">R$ 1.899,90 no PIX</p>
-                <span class="price-original">R$ 2.199,90</span>
-              </div>
-              <p class="description">
-                O novíssimo sistema de câmera é muito versátil de perto ou de
-                longe. Câmera de 48 MP.
-              </p>
-            </div>
-
-            <button class="button-gradiente">Compre agora</button>
-          </div>
-
-          <div class="card">
-            <h2>SerieB-2w</h2>
-
-            <div>
-              <img src="assets/products/SerieB-2w.png" alt="imagem do iphone" />
-            </div>
-
-            <div class="product-card">
-              <div class="stars" id="star-rating">
-                <span class="star" data-value="5">★</span>
-                <span class="star" data-value="4">★</span>
-                <span class="star" data-value="3">★</span>
-                <span class="star" data-value="2">★</span>
-                <span class="star" data-value="1">★</span>
-                <span>(6)</span>
-                <!-- Quantidade de avaliações -->
-              </div>
-
-              <div class="price-content">
-                <p class="price">R$ 1.899,90 no PIX</p>
-                <span class="price-original">R$ 2.199,90</span>
-              </div>
-              <p class="description">
-                O novíssimo sistema de câmera é muito versátil de perto ou de
-                longe. Câmera de 48 MP.
-              </p>
-            </div>
-
-            <button class="button-gradiente">Compre agora</button>
-          </div>
-
-          <div class="card">
-            <h2>Oficial-3xd</h2>
-
-            <div>
-              <img src="assets/products/Oficial-3xd.png" alt="imagem do iphone" />
-            </div>
-
-            <div class="product-card">
-              <div class="stars" id="star-rating">
-                <span class="star" data-value="5">★</span>
-                <span class="star" data-value="4">★</span>
-                <span class="star" data-value="3">★</span>
-                <span class="star" data-value="2">★</span>
-                <span class="star" data-value="1">★</span>
-                <span>(6)</span>
-                <!-- Quantidade de avaliações -->
-              </div>
-
-              <div class="price-content">
-                <p class="price">R$ 1.899,90 no PIX</p>
-                <span class="price-original">R$ 2.199,90</span>
-              </div>
-              <p class="description">
-                O novíssimo sistema de câmera é muito versátil de perto ou de
-                longe. Câmera de 48 MP.
-              </p>
-            </div>
-
-            <button class="button-gradiente">Compre agora</button>
-          </div>
-
-          <div class="card">
-            <h2>Apple-Watch</h2>
-
-            <div>
-              <img src="assets/products/Apple-Watch.png" alt="imagem do iphone" />
-            </div>
-
-            <div class="product-card">
-              <div class="stars" id="star-rating">
-                <span class="star" data-value="5">★</span>
-                <span class="star" data-value="4">★</span>
-                <span class="star" data-value="3">★</span>
-                <span class="star" data-value="2">★</span>
-                <span class="star" data-value="1">★</span>
-                <span >(6)</span>
-                <!-- Quantidade de avaliações -->
-              </div>
-
-              <div class="price-content">
-                <p class="price">R$ 1.899,90 no PIX</p>
-                <p class="price-original">R$ 2.199,90</p>
-              </div>
-              <p class="description">
-                O novíssimo sistema de câmera é muito versátil de perto ou de
-                longe. Câmera de 48 MP.
-              </p>
-            </div>
-
-            <button class="button-gradiente">Compre agora</button>
-           
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="suporte">
-      <div class="suporte-content">
-        <article>
-          <h2>24/7 no suporte ao cliente</h2>
-          <p>Nosso suporte está 7/7 24horas por dia para te ajudar com qualquer problema em nossos aparelhos</p>
           <div>
-            <button class="button-gradiente">Contate-nos</button>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="Seu e-mail" />
           </div>
-        </article>
 
-        <div class="suporte-image">
-          <img src="/assets/suporte.png" alt="uma pessoa  mexenndo no notebook e fone de ouvido">
-        </div>
-      </div>
-    </section>
-  </main>
+          <div class="input-phone" >
+            <label for="phone">Telefone</label>
+            <input type="tel" id="phone" placeholder="Seu Telefone" />
+          </div>
 
-  <script src="src/script.js"></script>
-</body>
 
+          <div>
+            <label for="message">O que você quer encomendar ?</label>
+            <textarea id="message" placeholder="Sua mensagem"></textarea>
+          </div>
+
+          <button class="button-dark">Enviar mensagem</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="src/script.js"></script>
+  </body>
 </html>
 <!-- <section class="products-section" id="applewatch"></section> -->

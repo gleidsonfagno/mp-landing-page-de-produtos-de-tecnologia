@@ -1,0 +1,64 @@
+#form-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 91px 16px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+    align-items: center;
+}
+
+.form-content {
+    max-width: 510px;
+    text-align: center;
+}
+
+.form-content p {
+    font-size: var(--fs-20px);
+    font-weight: regular;
+    color: var(--text-color-secondary);
+}
+
+.form {
+    max-width: 355px;
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"],
+.form input[type="tel"],
+.form textarea {
+    width: 100%;
+    padding: 10px 16px;
+    background: none;
+    /* margin-bottom: 10px; */
+    border: 1px solid var(--text-color-primary) ;
+    border-radius: 8px;
+    outline: none;
+    color: var(--text-color-primary);
+}
+
+.form label {
+    font-size: var(--fs-16px);
+    color: var(--text-color-primary);
+}
+
+.input-phone {
+    display: flex;
+    flex-direction: column;
+}
+
+.form textarea {
+    height: 146px;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+    color: var(--text-color-secondary);
+}
+
