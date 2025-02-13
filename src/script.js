@@ -13,3 +13,4 @@ function toggleMenu() {
     ? (menumobile.style.display = "none")
     : (menumobile.style.display = "flex");
 }
+
