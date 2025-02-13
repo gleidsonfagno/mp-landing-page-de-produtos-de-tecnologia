@@ -59,6 +59,12 @@ article p {
     .suporte-content {
         flex-direction: column;
     }
+    article h2 {
+        font-size: var(--fs-20px);
+    }
+    article p {
+        font-size: var(--fs-20px);
+    }
     article {
         padding: 20px 20px;
     }  

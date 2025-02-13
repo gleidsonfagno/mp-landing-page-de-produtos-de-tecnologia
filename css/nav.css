@@ -21,7 +21,7 @@ nav {
     width: 100%;
 }
 
-ul {
+.menu-items {
     list-style-type: none;
     display: flex;
     align-items: center;
@@ -93,7 +93,7 @@ ul {
         padding: 10px 20px;
     }
 
-    ul {
+    .menu-items {
         flex-direction: column;
         gap: 16px;
     }

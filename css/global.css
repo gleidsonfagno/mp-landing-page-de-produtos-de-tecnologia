@@ -24,7 +24,7 @@
   --bt-color-gradient-primary: #1371ef;
   --bt-color-gradient-secondary: #e539a2;
 
-  --bg-color11: linear-gradient(137deg, #1371ef, #e539a2);
+  --bg-color11: linear-gradient(137deg, #1371EF, #E539A2);
 
   --ff-nunito-sans: "Nunito", serif;
 
@@ -34,7 +34,9 @@
   --fs-15px: 15px;
   --fs-16px: 16px;
   --s-18px: 18px;
+  --fs-20px: 20px;
   --fs-21px: 21px;
+  --fs-24px: 24px;
   --fs-25px: 25px;
   --fs-36px: 36px;
   --fs-40px: 40px;
@@ -44,7 +46,7 @@
 html {
   font-family: "Nunito", serif;
   font-optical-sizing: auto;
-
+  scroll-behavior: smooth;
   background: var(--bg-color);
   color: var(--text-color-primary);
 }
@@ -82,9 +84,13 @@ button {
   outline: none;
 }
 
+ul {
+  list-style: none;
+}
+
 @media (max-width: 768px) {
   h1 {
-    font-size: var(--fs-36px) !important;
+    font-size: var(--fs-36px);
   }
   a {
     font-size: var(--fs-16px);
@@ -94,7 +100,7 @@ button {
 
 @media (max-width: 393px) {
   h1 {
-    font-size: var(--fs-21px) !important;
+    font-size: var(--fs-20px) ;
   }
   h4 {
     font-size: var(--fs-10px);

@@ -62,3 +62,15 @@
     color: var(--text-color-secondary);
 }
 
+
+@media (max-width: 393px) {
+    #form-section #form-content h2 {
+        font-size: var(--fs-20px) ;
+    }
+    #form-section #form-content p {
+        font-size: var(--fs-16px);
+    }
+    .form button {
+        padding: 13px 14px;
+    }
+}
