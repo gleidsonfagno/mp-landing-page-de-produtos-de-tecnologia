@@ -1,3 +1,8 @@
+
+# Projeto de Landing Page de Produtos de Tecnologia
+
+[Link do Projeto](https://mp-landing-page-de-produtos-de-tecnologia.vercel.app/)
+
 Crie uma landing page responsiva que apresenta smartphones e smartwatches, simulando uma página inicial de um e-commerce. O objetivo é aplicar conceitos de HTML e CSS para criar uma estrutura bem organizada e estilizada. A página deve ser funcional e focada no design, com elementos que simulam uma experiência real de compra online.
 
 ## 🤓 Antes de começar
@@ -14,8 +19,6 @@ Crie uma estrutura básica de pastas:
 -  Uma pasta css contendo `style.css` para os estilos.
 -  Uma pasta images para armazenar imagens utilizadas.
  
-
-
 ## 🔨 Requisitos
 
 #### Requisito 1: Menu
