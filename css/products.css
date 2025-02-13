@@ -102,6 +102,7 @@
   .card img {
     display: block;
     width: 100%;
+    max-width: 95px;
     max-height: 193px;
     height: 100%;
   }
